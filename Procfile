@@ -1,1 +1,1 @@
-worker: python simple-viewer.py
+web: gunicorn wsgi:app
