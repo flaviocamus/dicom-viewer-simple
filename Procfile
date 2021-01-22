@@ -1,0 +1,1 @@
+worker: python simple-viewer.py
