@@ -9,9 +9,11 @@ def root():
 
 @app.route('/QIDO/studies')
 def cond_main():
-    cond=open('static/payload1.json','r')
+    print( os.path.dirname(os.path.realpath(__file__)))
+    cond=open( os.path.dirname(os.path.realpath(__file__)) +'/static/payload1.json','r')
     # type application/dicom+json
     return Response(cond.read(),mimetype='application/dicom+json')
+    #return  os.path.dirname(os.path.realpath(__file__))
 
 
 if __name__ == '__main__':
