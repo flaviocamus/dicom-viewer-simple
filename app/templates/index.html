@@ -23,7 +23,7 @@
 
 	<div id="root"></div>
 
-  <script src="/static/index.umd.js" crossorigin></script>
+  <script src="{{ url_for('static',filename='index.umd.js') }}" crossorigin></script>
   <!--script src="/static/index.umd.js" crossorigin></script-->
   <script>
     var containerId = "root";
@@ -36,10 +36,10 @@
       servers: {
         dicomWeb: [
           {
-            name: 'DCM4CHEE',
-            wadoUriRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/wado',
-            qidoRoot: '/QIDO',
-            wadoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
+            name: 'ORTHANC',
+            wadoUriRoot: '/dicom-web',
+            qidoRoot: '/dicom-web',
+            wadoRoot: '/dicom-web',
             qidoSupportsIncludeField: true,
             imageRendering: 'wadors',
             thumbnailRendering: 'wadors',
